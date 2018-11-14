@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Test_R"
+             x:Class="Test_R.MainPage">
+    <StackLayout x:Name="stackLayout" Spacing="8">
+        <Label  x:Name="LabelMain"
+            Text="https://fileserver-tsh.herokuapp.com" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <ListView ItemsSource="{Binding folderInfo}"  x:Name="lstView" RowHeight="60" ItemTapped="lstView_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding name}"  TextColor="Black" Detail="{Binding birthtime}" DetailColor="Black" Tapped="TextCell_Tapped" >
+                    </TextCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Открыть"
+            Clicked="OnButtonClicked"
+            VerticalOptions="End"
+            HorizontalOptions="Center"/>
+    </StackLayout>
+</ContentPage>

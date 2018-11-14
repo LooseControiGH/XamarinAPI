@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test_R.FolderInfo">
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Label  x:Name="labelFolder"
+            Text="https://fileserver-tsh.herokuapp.com" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+        <ListView ItemsSource="{Binding secondFolderInfo}"  x:Name="secondListView" RowHeight="60" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                        <TextCell Text="{Binding name}" TextColor="Black" Detail="{Binding birthtime}" DetailColor="Black" Tapped="TextCell_Tapped" ></TextCell>
+                    </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+  
+</ContentPage>

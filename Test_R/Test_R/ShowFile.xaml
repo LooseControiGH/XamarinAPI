@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Test_R.ShowFile">
+    <ContentPage.Content>
+        <ScrollView >
+            <StackLayout>
+                <Editor x:Name="editorText"></Editor>
+                <Label x:Name="labelSecond"
+                Text="https://fileserver-tsh.herokuapp.com" VerticalOptions="Center"  HorizontalOptions="Center"/>
+                <Label x:Name="labelDateCreator" LineBreakMode="WordWrap"></Label>
+                <Label x:Name="textData" ></Label>
+                <Image x:Name="imageContent" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" ></Image>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
